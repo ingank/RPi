@@ -29,4 +29,17 @@ Serverseitige Abhängigkeiten (externer V-Server):
 
 Konfiguration
 
-- 
+In der Datei `keep-mux-tunnel.sh` muss unter `server`
+der Name des externen V-Servers eingetragen werden.
+
+Benutzung
+
+Mit dem Befehl `~/start-mux-tunnel.sh` wird der ssh-Tunnel aufgebaut.
+
+Per `tmux attach` kann der Status des Tunnels live begutachtet werden.
+
+Innerhalb von tmux kann dann als Nutzer `tunnel` auf dem V-Server per ssh
+gearbeitet werden.
+
+Innerhalb von tmux kann das Terminal per [Ctrl-B] und danach [D] verlassen werden.
+Der Tunnel bleibt innerhalb des tmux-Servers weiterhin bestehen.
