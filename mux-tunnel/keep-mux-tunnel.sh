@@ -9,7 +9,7 @@ do
         -R [::1]:2222:[::1]:2222 \
         -o ServerAliveInterval=180 \
         -o ServerAliveCountMax=3 \
-        foo@server.domain.tld \
+        user@server.domain.tld \
         2>>./tunnel.log
 	sleep  180
 done
