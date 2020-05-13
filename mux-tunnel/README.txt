@@ -26,3 +26,7 @@ Serverseitige Abhängigkeiten (externer V-Server):
 - ssh-Deamon
 - öffentlicher RSA-Schlüssel des Rasperry Pi ist bekannt
 - ssh-Zugriff per RSA-PKI ist konfiguriert
+
+Konfiguration
+
+- 
