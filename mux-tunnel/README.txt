@@ -15,6 +15,10 @@ Clientseitige Abhängigkeiten und Voraussetzungen (Rasperry Pi):
 - ssh-Client
 - ein RSA-Schlüsselpaar
 - tmux
+- im Verzeichnis '/home/tunnel/' befinden sich die Dateien:
+
+      start-mux-tunnel.sh
+      keep-mux-tunnel.sh       
 
 Serverseitige Abhängigkeiten (externer V-Server):
 
