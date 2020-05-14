@@ -2,8 +2,8 @@
 mux-tunnel
 ==========
 
-Stabiler reverse-ssh-Tunnel zum Connecten auf den RPI über einen
-externen virtuellen Server.
+Stabiler reverse-ssh-Tunnel zum Connecten auf den RPI über einen externen
+virtuellen Server.
 
 
 Vorteile dieser Variante
