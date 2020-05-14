@@ -5,8 +5,9 @@ externen virtuellen Server.
 
 Vorteile dieser Variante:
 
+- abgestimmt auf die eingeschränkte DS-Lite-Konnektivität
 - IP oder DNS-Name des RPI muss nicht bekannt sein.
-- ssh ist trivial zu konfigurieren gegenüber einem tun/tap Tunnel.
+- ssh ist trivial zu konfigurieren gegenüber einem tun/tap-Tunnel.
 - Ressourcenschonend, auf das Wesentliche konzentriert.
 
 Clientseitige Abhängigkeiten und Voraussetzungen (Rasperry Pi):
