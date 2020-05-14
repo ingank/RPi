@@ -80,4 +80,4 @@ Innerhalb von tmux kann dann als Nutzer `tunnel` auf dem V-Server per ssh
 gearbeitet werden.
 
 Innerhalb von tmux kann das Terminal per [Ctrl-B] und danach [D] verlassen werden.
-Der Tunnel bleibt innerhalb des tmux-Servers weiterhin bestehen.
+Der Tunnel bleibt nach dem Verlassen mit dieser Tastenabfolge weiterhin bestehen.
