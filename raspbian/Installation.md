@@ -1,8 +1,4 @@
-# Raspbian als Betriebssystem
-
-## Installation
-
-### Raspbian-Image auf SD-Card schreiben
+# Raspbian installieren
 
 Führe auf einem Ubuntu-Desktop-System nacheinander folgende Schritte aus:
 
