@@ -27,12 +27,17 @@ Im Dateimananger werden die Dateien der boot-Partition aufgelistet.
 * Rechtsklick in freien Ordnerbereich -> 'In Terminal öffnen'.
 * Im Terminal eingeben: `$ sudo touch ssh`
 * Anfügen an Datei 'cmdline.txt': `ip=192.168.100.100:::255.255.255.0::eth0:off`
-
-Bemerkung: Das Netzwerksegment 192.168.100.0 wird in diesem Beispiel unabhängig vom meist genutzen 192.168.0.0 für administrative Aufgaben verwendet. Da die IPv4 192.168.100.100 direkt über einen Kernel-Paramter erzeugt wird, ist eine missliche Konfiguration über die üblichen Systemwerkzeuge hoffentlich ausgeschlossen.
-
 * Alle Dateien und Programme schließen, die auf die boot-Partition zugreifen.
 * Klicke auf Quadrat im Programm 'Laufwerke' um die boot-Partition auszuhängen.
 * Entnehme die SD-Card aus dem Ubuntu-Rechner.
+
+Bemerkung:  
+Das Netzwerksegment 192.168.100.0 wird in diesem Beispiel unabhängig vom meist genutzen 192.168.0.0 für administrative Aufgaben verwendet. Da die IPv4 192.168.100.100 direkt über einen Kernel-Paramter erzeugt wird, ist eine missliche Konfiguration über die üblichen Systemwerkzeuge hoffentlich ausgeschlossen.
+
+Weiterführende Informationen zum Kernel-Paramter 'ip=':
+* [Dokumentation auf kernel.org](https://www.kernel.org/doc/html/latest/admin-guide/nfs/nfsroot.html#kernel-command-line)
+* [deutschsprachiges Dokument zum Thema](http://www.netzmafia.de/skripten/hardware/RasPi/RasPi_Install.html#initip)
+
 
 ## Erstes Booten des RaspberryPi und Zugriff mittels ssh
 
