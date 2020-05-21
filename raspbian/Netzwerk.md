@@ -5,7 +5,7 @@
 # Zufälliger IPv6-Suffix
 slaac private
 
-# DNS-Server, bekanntgegeben über RAs,
+# DNS-Server (bekanntgegeben über RAs)
 # sollen nicht berücksichtigt werden:
 noipv6rs
 
