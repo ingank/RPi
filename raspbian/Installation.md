@@ -136,6 +136,10 @@ Istzustand:
 $ ip -f inet a s eth0 | grep inet
     inet 192.168.100.100/24 brd 192.168.100.255 scope global eth0
     inet 192.168.0.20/24 brd 192.168.0.255 scope global dynamic noprefixroute eth0
+$ ip route
+default via 192.168.0.1 dev eth0 proto dhcp src 192.168.0.20 metric 202
+192.168.0.0/24 dev eth0 proto dhcp scope link src 192.168.0.20 metric 202
+192.168.100.0/24 dev eth0 proto kernel scope link src 192.168.100.100
 ```
 Sollzustand:
 ```
