@@ -121,6 +121,41 @@ finden.
 > echo noipv6rs >> /etc/dhcpcd.conf
 > init 6
 ```
-Nach dem Neustart des RaspPi, sollten die eingangs gewünschten Resolver
-- und ausschließlich diese - in der Datei /etc/resolv.conf dauerhaft vermerkt sein.
+Nach dem Neustart des RaspPi, sollten die eingangs gewünschten Resolver - und ausschließlich diese -
+in der Datei /etc/resolv.conf dauerhaft vermerkt sein.
 
+## Statische IP-Adressen vergeben
+
+Der DHCP-Server des lokalen Netzwerkes vergibt bereitwillig IP-Adressen aus seinem Adresspool. Auch der RaspPi bezieht in der Grundkonfiguration seine IP-Adresse(n) auf diese Weise.
+
+Soll der RaspPi eine statische IP zugewiesen bekommen,
+kann dies wiedrum über den schon bekannten Dienst dhcpcd geschehen.
+
+Istzustand:
+```
+$ ip -f inet a s eth0 | grep inet
+    inet 192.168.100.100/24 brd 192.168.100.255 scope global eth0
+    inet 192.168.0.20/24 brd 192.168.0.255 scope global dynamic noprefixroute eth0
+```
+Sollzustand:
+```
+$ ip -f inet a s eth0 | grep inet
+    inet 192.168.100.100/24 brd 192.168.100.255 scope global eth0
+    inet 192.168.0.100/24 brd 192.168.0.255 scope global noprefixroute eth0
+$ ip route
+default via 192.168.0.1 dev eth0 src 192.168.0.100 metric 202 
+192.168.0.0/24 dev eth0 proto dhcp scope link src 192.168.0.100 metric 202 
+192.168.100.0/24 dev eth0 proto kernel scope link src 192.168.100.100 
+```
+Vorgehen:
+```
+$ sudo nano /etc/dhcpcd.conf
+
+# Drei Zeilen hinzufügen:
+
+interface eth0
+static ip_address=192.168.0.100/24
+static routers=192.168.0.1
+
+$ sudo systemctl restart dhcpcd
+```
