@@ -5,7 +5,8 @@
 # Zufälliger IPv6-Suffix
 slaac private
 
-# DNS-Server über RAs sollen nicht berücksichtigt werden:
+# DNS-Server, bekanntgegeben über RAs,
+# sollen nicht berücksichtigt werden:
 noipv6rs
 
 # Statische Konfiguration des LAN-Interfaces
