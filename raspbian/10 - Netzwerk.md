@@ -45,7 +45,9 @@ nameserver 2001:4860:4860::8844
 nameserver 2a02:908:2:a::1
 nameserver 2a02:908:2:b::1
 ```
-Der ehemalige IPv4-Resolver 192.168.0.1 wurde durch diese Aktion schon elemeniert.
+Der ehemalige IPv4-Resolver 192.168.0.1,
+bereitgestellt durch den DHCP-Server des Gateways,
+wurde somit gnädigerweise schon eleminiert.
 Nun geht es den beiden IPv6-Resolvern an den Kragen,
 die per *Router Advertisement* hartnäckig ihren Weg in die /etc/resolv.conf
 finden.
@@ -53,14 +55,16 @@ finden.
 > echo name_server_blacklist=2a02:* >> /etc/resolvconf.conf
 > resolvconf -u
 ```
-Nach dem Neustart des RaspPi, sollten die eingangs gewünschten Resolver - und ausschließlich diese -
+Nach dem Neustart des RaspPi, sollten die eingangs gewünschten Resolver
+(und ausschließlich diese)
 in der Datei /etc/resolv.conf dauerhaft vermerkt sein.
 
 ## Statische IP-Adressen vergeben
 
-Der DHCP-Server des lokalen Netzwerkes vergibt bereitwillig IP-Adressen aus seinem Adresspool. Auch der RaspPi bezieht in der Grundkonfiguration seine IP-Adresse(n) auf diese Weise.
+Der DHCP-Server des lokalen Netzwerkes vergibt bereitwillig IP-Adressen aus seinem Adresspool.
+Auch der RaspPi bezieht in der Grundkonfiguration seine IP-Adresse(n) auf diese Weise.
 
-Soll der RaspPi eine statische IP zugewiesen bekommen,
+Soll der RaspPi eine oder auch viele statische IP's zugewiesen bekommen,
 kann dies wiedrum über den schon bekannten Dienst dhcpcd geschehen.
 
 Istzustand:
@@ -98,37 +102,11 @@ $ sudo systemctl restart dhcpcd
 
 ## IPv6 Privacy Extensions (wieder) aktivieren
 
-Durch das Löschen der originalen /etc/dhcpcd.conf wurden auch die
-IPv6 Privacy Extensions vorübergehend deaktiviert. Die Aktivierung stellt
-jedoch keine große Hürde dar:
+Durch das radikale Löschen der originalen /etc/dhcpcd.conf weiter oben in diesem
+Tutorial, wurden auch die IPv6 Privacy Extensions vorübergehend auch wegrationalisiert.
+Die (Wieder-) Aktivierung stellt jedoch keine große Hürde dar:
 ```
 $ sudo su; echo slaac private >> /etc/dhcpcd.conf
 > systemctl daemon-reload
 > systemctl restart dhcpcd
-```
-
-## Zusammenfassung
-```
-$ cat /etc/dhcpcd.conf
-static domain_name_servers=8.8.8.8 2001:4860:4860::8888 8.8.4.4 2001:4860:4860::8844
-interface eth0
-static ip_address=192.168.0.100/24
-static routers=192.168.0.1
-slaac private
-
-$ cat /etc/resolvconf.conf
-# Configuration for resolvconf(8)
-# See resolvconf.conf(5) for details
-
-resolv_conf=/etc/resolv.conf
-# If you run a local name server, you should uncomment the below line and
-# configure your subscribers configuration files below.
-#name_servers=127.0.0.1
-
-# Mirror the Debian package defaults for the below resolvers
-# so that resolvconf integrates seemlessly.
-dnsmasq_resolv=/var/run/dnsmasq/resolv.conf
-pdnsd_conf=/etc/pdnsd.conf
-unbound_conf=/var/cache/unbound/resolvconf_resolvers.conf
-name_server_blacklist=2a02:*
 ```
