@@ -198,5 +198,5 @@ resolv_conf=/etc/resolv.conf
 dnsmasq_resolv=/var/run/dnsmasq/resolv.conf
 pdnsd_conf=/etc/pdnsd.conf
 unbound_conf=/var/cache/unbound/resolvconf_resolvers.conf
-name_server_blacklist=2a*
+name_server_blacklist=2a02:*
 ```
