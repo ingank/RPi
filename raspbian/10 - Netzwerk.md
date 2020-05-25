@@ -105,23 +105,24 @@ $ sudo systemctl restart dhcpcd
 ### Mehr als eine IP-Adresse statisch zuweisen
 
 Soll mehr als eine IP-Adresse pro Interface gebunden werden,
-können diese über die Dateien /etc/network/interfaces.d/* konfiguriert werden:
+können die zusätzlichen Adressen über die Dateien in /etc/network/interfaces.d/* konfiguriert werden.
+Im folgenden Beispiel werden zwei zusätzliche IP-Adressen an das Interface eth0 gebunden:
 ```
 $ sudo nano /etc/network/interfaces.d/eth0-foo
 auto eth0
 allow-hotplug eth0
-iface eth0:1 inet static
-    address 192.168.0.100
-    netmask 255.255.255.0
-    gateway 192.168.0.1
-    
-auto eth0:1
-allow-hotplug eth0:1
-iface eth0:1 inet static
+
+iface eth0 inet static
     address 192.168.0.101
     netmask 255.255.255.0
     gateway 192.168.0.1
+    
+iface eth0 inet static
+    address 192.168.0.102
+    netmask 255.255.255.0
+    gateway 192.168.0.1
 ```
+Die Adressen stehen nach einem Neustart des RaspPi bereit.
 
 ## IPv6 Privacy Extensions (wieder) aktivieren
 
@@ -144,7 +145,7 @@ Mit dem Konsolenbefehl
 ```
 $ sudo apt install dnsmasq
 ```
-bekommt der Minirechner zuerst einmal DNS-Server spendiert.
+bekommt der Minirechner zuerst einmal einen DNS-Server spendiert.
 Systemweite Namensauflösungen  werden ab sofort von ihm behandelt:
 ```
 $ cat /etc/resolve.conf
