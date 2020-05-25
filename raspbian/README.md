@@ -45,3 +45,16 @@ iface eth0 inet static
     netmask 255.255.255.0
     gateway 192.168.0.1
 ```
+### /etc/ssh/sshd_config
+```
+AddressFamily inet
+ListenAddress 127.0.0.1
+ListenAddress 192.168.0.100
+ListenAddress 192.168.100.100
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+```
