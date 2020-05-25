@@ -62,10 +62,12 @@ in der Datei /etc/resolv.conf dauerhaft vermerkt sein.
 ## Statische IP-Adressen vergeben
 
 Der DHCP-Server des lokalen Netzwerkes vergibt bereitwillig IP-Adressen aus seinem Adresspool.
-Auch der RaspPi bezieht in der Grundkonfiguration seine IP-Adresse(n) auf diese Weise.
+Auch der RaspPi bezieht in der Grundkonfiguration seine IP-Adresse auf diese Weise.
 
-Soll der RaspPi eine oder auch viele statische IP's zugewiesen bekommen,
-kann dies wiedrum über den schon bekannten Dienst dhcpcd geschehen.
+### Eine einzelne IP-Adresse statisch zuweisen
+
+Soll der RaspPi eine statische IP zugewiesen bekommen,
+kann dies über den schon bekannten Dienst dhcpcd geschehen.
 
 Istzustand:
 ```
@@ -98,6 +100,27 @@ static ip_address=192.168.0.100/24
 static routers=192.168.0.1
 
 $ sudo systemctl restart dhcpcd
+```
+
+### Mehr als eine IP-Adresse statisch zuweisen
+
+Soll mehr als eine IP-Adresse pro Interface gebunden werden,
+können diese über die Dateien /etc/network/interfaces.d/* konfiguriert werden:
+```
+$ sudo nano /etc/network/interfaces.d/eth0-foo
+auto eth0
+allow-hotplug eth0
+iface eth0:1 inet static
+    address 192.168.0.100
+    netmask 255.255.255.0
+    gateway 192.168.0.1
+    
+auto eth0:1
+allow-hotplug eth0:1
+iface eth0:1 inet static
+    address 192.168.0.101
+    netmask 255.255.255.0
+    gateway 192.168.0.1
 ```
 
 ## IPv6 Privacy Extensions (wieder) aktivieren
