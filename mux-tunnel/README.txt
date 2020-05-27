@@ -1,26 +1,24 @@
-==========
-mux-tunnel
-==========
+# mux-tunnel
 
-Stabiler reverse-ssh-Tunnel zum Connecten auf den RPI über einen externen
-virtuellen Server.
+Reverse-ssh-Tunnel zum Connecten auf den RPI über einen externen virtuellen Server.
+Geht der Tunnel verloren, wird erneut versucht, die Verbindung aufzubauen.
 
+## Vorteile dieser Variante
 
-Vorteile dieser Variante
-------------------------
+* abgestimmt auf die eingeschränkte DS-Lite-Konnektivität
+* IP oder DNS-Name des RPI muss nicht bekannt sein.
+* ssh ist trivial zu konfigurieren gegenüber einem tun/tap-Tunnel.
+* tun/tap muss auf dem VServer nicht vorhanden sein.
+* Ressourcenschonend, auf das Wesentliche konzentriert.
+* Nutzung von Linux-Standardtools.
 
-- abgestimmt auf die eingeschränkte DS-Lite-Konnektivität
-- IP oder DNS-Name des RPI muss nicht bekannt sein.
-- ssh ist trivial zu konfigurieren gegenüber einem tun/tap-Tunnel.
-- Ressourcenschonend, auf das Wesentliche konzentriert.
+## Clientseitige Konfiguration (Rasperry Pi)
 
+   $ sudo apt install tmux
+   $ sudo apt install ssh
+   $ adduser tunnel
+   
 
-Clientseitige Konfiguration (Rasperry Pi)
------------------------------------------
-
-* Einen Benutzer namens 'tunnel' anlegen.
-* Paket 'tmux' (Terminal Muxer) installieren.
-* Einen ssh-Client installieren.
 * Ein RSA-Schlüsselpaar erzeugen.
 * Die Dateien
 
