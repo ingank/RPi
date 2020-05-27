@@ -1,6 +1,6 @@
 # RPi
 
-Raspberry Pi Dokumentation und Toolsammlung
+Raspberry Pi Dokumentation und Toolsammlung.
 
 # CONFIG
 
