@@ -14,14 +14,14 @@ Geht der Tunnel verloren, wird erneut versucht, die Verbindung aufzubauen.
 
 ## Clientseitige Konfiguration (Rasperry Pi)
 
-   $ sudo apt install tmux
-   $ sudo apt install ssh
-   $ adduser tunnel
+  $ sudo apt install tmux
+  $ sudo apt install ssh
+  $ adduser tunnel
+  $ su tunnel
+  $ ssh-keygen -t rsa -b 4096
    
-
-* Ein RSA-Schlüsselpaar erzeugen.
-* Die Dateien
-
+* Danach die Dateien
+   
   start-mux-tunnel.sh
   keep-mux-tunnel.sh
   
