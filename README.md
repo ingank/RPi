@@ -1,2 +1,2 @@
-# my-rpi
+# RPi
 Raspberry Pi Dokumentation und Toolsammlung
