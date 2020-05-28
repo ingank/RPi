@@ -95,3 +95,4 @@ dhcp-option=option:dns-server,192.168.1.1
 dhcp-mac=set:client_is_a_pi,B8:27:EB:*:*:*
 dhcp-reply-delay=tag:client_is_a_pi,2
 ```
+## Routing und NAT
