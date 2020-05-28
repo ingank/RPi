@@ -86,15 +86,8 @@ $ sudo nano /etc/dnsmasq.conf
 ```
 Die neue komplette `dnsmasq.conf` schaut jetzt folgendermaßen aus:
 ```
-interface wlan0
-
-listen-address=127.0.0.1
-listen-address=192.168.0.100
-
+interface=wlan0
 no-dhcp-interface=eth0
-no-dhcp-interface=127.0.0.1
-
-bind-interfaces
 
 dhcp-range=192.168.1.100,192.168.1.200,255.255.255.0,24h
 dhcp-option=option:dns-server,192.168.1.1
