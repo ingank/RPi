@@ -34,8 +34,8 @@ dhcp-mac=set:client_is_a_pi,B8:27:EB:*:*:*
 dhcp-reply-delay=tag:client_is_a_pi,2
 
 # /etc/network/interfaces.d/eth0-foo
-# Zwei weitere statische IPv4-Adressen auf eth0 binden
-# Dies ist nicht über dhcpcd möglich!
+# Beispiel däfür, wie zwei weitere statische IPv4-Adressen
+# auf eth0 gebunden werden können. Dies ist nicht über dhcpcd möglich!
 auto eth0
 allow-hotplug eth0
 iface eth0 inet static
