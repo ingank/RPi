@@ -55,7 +55,7 @@ Weiterführende Informationen zum Kernel-Paramter 'ip=':
 
 ## Standardpasswort ändern
 
-Direkt nach dem Login muss das voreingestellte Passwort geändert werden:
+Direkt nach dem Login wird das voreingestellte Passwort geändert:
 
 ```
 pi@raspberrypi:~ $ passwd
