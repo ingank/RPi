@@ -12,6 +12,9 @@ Geht der Tunnel verloren, wird erneut versucht, die Verbindung aufzubauen.
 * Ressourcenschonend, auf das Wesentliche konzentriert.
 * Nutzung von Linux-Standardtools.
 
+## Nachteile dieser Variante
+
+* kein echtes VPN
 
 ## Clientseitige Konfiguration (Rasperry Pi)
 
