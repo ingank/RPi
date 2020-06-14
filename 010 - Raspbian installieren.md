@@ -53,11 +53,9 @@ Weiterführende Informationen zum Kernel-Paramter 'ip=':
 * Im Terminal eingeben: `$ ssh pi@192.168.100.100`
 * Das Standardpasswort lautet: **raspberry**
 
-## Standardpasswort deaktivieren / neues Passwort vergeben
+## Standardpasswort ändern
 
-Direkt nach dem Login muss das voreingestellte Passwort geändert werden,
-denn wenn der RaspberryPi an ein IPv6-Gateway angeschlossen ist, so kann er
-im globalen IPv6-Adressraum sofort adressiert werden.
+Direkt nach dem Login muss das voreingestellte Passwort geändert werden:
 
 ```
 pi@raspberrypi:~ $ passwd
