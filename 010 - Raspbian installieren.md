@@ -1,6 +1,6 @@
 # Raspbian installieren
 
-... und grundlegend konfigurieren.
+Diese Kurzanleitung beschreibt die Installation von Raspbian auf einem RaspberryPi. An den RaspberryPi muss zur Netzwerk-Konfiguration weder Tastatur noch Bildschirm angeschlossen werden. Der administartive Zugriff erfolgt im späteren Verlauf per LAN/IPv4/SSH.
 
 ## Betriebssystemdatenträger erstellen
 
