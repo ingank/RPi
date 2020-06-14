@@ -1,4 +1,4 @@
-# Konfigurationsdateien
+# Grundkonfiguration
 
 # /boot/ssh
 # Einmaltrigger beim ersten Booten zur dauerhaften Aktivierung des ssh-Servers.
@@ -33,6 +33,23 @@ bind-interfaces
 dhcp-mac=set:client_is_a_pi,B8:27:EB:*:*:*
 dhcp-reply-delay=tag:client_is_a_pi,2
 
+# /etc/ssh/sshd_config
+# Der sshd wird nur an IPv4 gebunden.
+# Damit ist er ausschließlich über das lokale IPv4-Netzwerksegment erreichbar.
+AddressFamily inet
+ListenAddress 127.0.0.1
+ListenAddress 192.168.0.100
+ListenAddress 192.168.100.100
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server
+
+
+# Erweiterte Konfiguration
+
 # /etc/network/interfaces.d/eth0-foo
 # Beispiel däfür, wie zwei weitere statische IPv4-Adressen
 # auf eth0 gebunden werden können. Dies ist nicht über dhcpcd möglich!
@@ -47,16 +64,3 @@ iface eth0 inet static
     netmask 255.255.255.0
     gateway 192.168.0.1
 
-# /etc/ssh/sshd_config
-# Der sshd wird nur an IPv4 gebunden.
-# Damit ist er ausschließlich über das lokale IPv4-Netzwerksegment erreichbar.
-AddressFamily inet
-ListenAddress 127.0.0.1
-ListenAddress 192.168.0.100
-ListenAddress 192.168.100.100
-ChallengeResponseAuthentication no
-UsePAM yes
-X11Forwarding yes
-PrintMotd no
-AcceptEnv LANG LC_*
-Subsystem sftp /usr/lib/openssh/sftp-server
