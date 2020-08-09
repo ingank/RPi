@@ -26,7 +26,19 @@ Geht der Tunnel verloren, wird erneut versucht, die Verbindung aufzubauen.
 * Beide Dateien als Benutzer `tunnel` ausführbar machen.
 * In `~/keep-mux-tunnel.sh` unter `server=` den Namen des externen V-Servers eintragen.
 
-### `/home/tunnel/`
+### `/home/tunnel/start-mux-tunnel.sh`
+
+```
+#!/bin/bash
+
+sleep 3
+tmux new-session -d -s tunnelmux
+sleep 1
+tmux send-keys '/home/tunnel/keep-mux-tunnel.sh' C-m
+```
+
+### `/home/tunnel/keep-mux-tunnel.sh`
+
 ```
 #!/bin/bash
 
