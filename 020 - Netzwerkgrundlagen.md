@@ -130,9 +130,11 @@ Durch das radikale Löschen der originalen /etc/dhcpcd.conf weiter oben in diese
 Tutorial, wurden auch die IPv6 Privacy Extensions vorübergehend auch wegrationalisiert.
 Die (Wieder-) Aktivierung stellt jedoch keine große Hürde dar:
 ```
-$ sudo su; echo slaac private >> /etc/dhcpcd.conf
+$ sudo su
+> echo slaac private >> /etc/dhcpcd.conf
 > systemctl daemon-reload
 > systemctl restart dhcpcd
+> exit
 ```
 
 ## Dnsmasq installieren
@@ -163,7 +165,7 @@ nameserver 2001:4860:4860::8844
 ```
 Außerdem ist der DNS-Server (dnsmasq) ab sofort über die IP-Adressen 192.168.0.100 und 192.168.100.100 am Port 53 erreichbar:
 ```
-fremd@rechner:~$ dig @192.168.100.100 +header-only
+fremder@rechner:~$ dig @192.168.100.100 +header-only
 
 ; <<>> DiG 9.11.3-1ubuntu1.11-Ubuntu <<>> @192.168.100.100 +header-only
 ; (1 server found)
@@ -179,6 +181,8 @@ fremd@rechner:~$ dig @192.168.100.100 +header-only
 ;; WHEN: Sun May 24 22:10:44 CEST 2020
 ;; MSG SIZE  rcvd: 12
 ```
-Die zweite Komponente von dnsmasq ist ein DHCP-Server.
+Die zweite Komponente von `dnsmasq` ist ein DHCP-Server.
 Dieser ist standardmäßig deaktiviert,
-was in dieser Phase getrost so bleiben kann.
+was in dieser Phase,
+in der es alleinig um das Thema Namensauflösung geht,
+vernachlässigbar ist.
