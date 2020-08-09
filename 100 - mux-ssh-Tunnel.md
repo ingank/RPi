@@ -60,8 +60,9 @@ do
 done
 ```
 
-##### Mindest-Konfiguration des ssh-Clients in `/etc/ssh/ssh_config`:
+### `/etc/ssh/ssh_config`
 ```
+# Mindest-Konfiguration
 Host *
     SendEnv LANG LC_*
     GSSAPIAuthentication yes
@@ -74,8 +75,9 @@ Host *
 * Einen Benutzer namens 'tunnel' anlegen.
 * Öffentlichen RSA-Schlüssel des Rasperry Pi importieren.
 
-##### Mindest-Konfiguration des ssh-Server in `/etc/ssh/sshd_config`:
+### `/etc/ssh/sshd_config`:
 ```
+# Mindest-Konfiguration
 GatewayPorts clientspecified
 ClientAliveInterval 180
 ClientAliveCountMax 3
