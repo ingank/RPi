@@ -1,8 +1,7 @@
 ## IPv6 Privacy Extensions (wieder) aktivieren
 
-Durch das radikale Löschen der originalen /etc/dhcpcd.conf weiter oben in diesem
-Tutorial, wurden auch die IPv6 Privacy Extensions vorübergehend auch wegrationalisiert.
-Die (Wieder-) Aktivierung stellt jedoch keine große Hürde dar:
+Bei der strikten Befolgung der in den Kapiteln 020 und 030 beschriebenen Arbeitsschritte werden zwangsläufig die IPv6 Privacy Extensions
+des RasperryPi deaktiviert. Die (Wieder-) Aktivierung stellt jedoch keine große Hürde dar:
 ```
 $ sudo su
 > echo slaac private >> /etc/dhcpcd.conf
