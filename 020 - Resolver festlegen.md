@@ -1,4 +1,4 @@
-## Resolver (Standard Nameserver) festlegen
+# Resolver (Standard Nameserver) festlegen
 
 Der RaspPi bezieht seine Resolver in der Grundeinstellung von DHCP-Servern
 (IPv4/IPv6) und aus *Router Advertisements* (IPv6). Wer jedoch eigene oder
