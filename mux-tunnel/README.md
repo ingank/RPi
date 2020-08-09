@@ -73,3 +73,8 @@ Ein Login, beispielsweise per Passwort, ist dann nicht mehr möglich.
 * Innerhalb von tmux kann dann als Nutzer `tunnel` auf dem V-Server per ssh gearbeitet werden.
 * Innerhalb von tmux kann das Terminal mit der Tastenfolge '[Ctrl-B] danach [D]' verlassen werden.
   Der Tunnel bleibt nach dem Verlassen mit dieser Tastenabfolge weiterhin bestehen.
+  
+## Automatischer Start beim Booten
+
+* per systemd
+* https://transang.me/create-startup-scripts-in-ubuntu/
