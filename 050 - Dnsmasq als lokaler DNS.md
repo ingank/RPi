@@ -1,8 +1,8 @@
 # Dnsmasq als lokaler DNS-Resolver
 
-Der Betrieb des RaspPi innerhalb des lokalen Netzwerkes und die Anbindung an das Internet
-wurden in den vorherigen Kapiteln sicher gestellt. Ab hier kann er mit einfachen
-Schritten zum Arbeitstier ausgebaut werden, denn im Normalfall können mit einer soliden Grundkonfiguration neue Dienste problemlos ins Setup eingefügt werden.
+Der Betrieb des RaspPi innerhalb des lokalen Netzwerkes und die Anbindung an das Internet wurden in den vorherigen Kapiteln sicher gestellt.
+Ab hier kann er mit einfachen Schritten zum Arbeitstier ausgebaut werden,
+denn im Normalfall können mit einer soliden Grundkonfiguration neue Dienste problemlos ins Setup eingefügt werden.
 
 Mit dem Konsolenbefehl
 ```
