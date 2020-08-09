@@ -1,4 +1,4 @@
-## Dnsmasq installieren
+# Dnsmasq als lokaler DNS-Resolver
 
 Der Betrieb des RaspPi innerhalb des lokalen Netzwerkes und die Anbindung an das Internet
 wurden in den vorherigen Kapiteln sicher gestellt. Ab hier kann er mit einfachen
@@ -43,7 +43,4 @@ fremder@rechner:~$ dig @192.168.100.100 +header-only
 ;; MSG SIZE  rcvd: 12
 ```
 Die zweite Komponente von `dnsmasq` ist ein DHCP-Server.
-Dieser ist standardmäßig deaktiviert,
-was in dieser Phase,
-in der es alleinig um das Thema Namensauflösung geht,
-vernachlässigbar ist.
+Diese ist standardmäßig deaktiviert.
