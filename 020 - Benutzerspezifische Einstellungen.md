@@ -14,7 +14,10 @@ passwd: password updated successfully
 
 ## Projektbezogene Benutzer erleichtern das Arbeiten
 
-Wird für jedes Projekt ein gesonderter Benutzer angelegt, kann die Rechtevergabe, die Fehlersuche und das Finden von projektbezogenen Dateien erleichtert werden.
+Wird für jedes Projekt, vor allem im Umfeld der Softwareentwicklung,
+ein gesonderter Benutzer angelegt,
+kann die Rechtevergabe,
+die Fehlersuche und das Finden von projektbezogenen Dateien erleichtert werden.
 
 ### Benutzer anlegen
 
