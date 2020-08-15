@@ -7,7 +7,7 @@ ssh-keygen -t rsa -b 4096
 
 ## öffentlichen Schlüssel einem ssh-Server bekanntgeben
 ```
-ssh-copy-id benutzer@entfernter.rechner
+ssh-copy-id foo@bar.bazz
 ```
 
 ## Schlüssel von GitHub beziehen
