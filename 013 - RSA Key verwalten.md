@@ -12,5 +12,5 @@ ssh-copy-id benutzer@entfernter.rechner
 
 ## Schlüssel von GitHub beziehen
 ```
-$ ssh-import-id-gh gh-user   # GitHub
+$ ssh-import-id-gh gh-user
 ```
