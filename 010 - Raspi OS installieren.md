@@ -2,7 +2,7 @@
 
 Diese Kurzanleitung beschreibt die Installation von RaspiOS auf einer SD-Karte.
 Die Grundkonfiguration erfolgt dabei auf einem aktuellen Ubuntu (out of the box).
-Dies hat den Vorteil, dass der Raspi für seinen ersten Start - wenn denn so gewünscht - weder Monitor noch Eingabegeräte benötigt.
+Dies hat den Vorteil, dass der Raspi für seinen ersten Start (wenn denn so gewünscht) weder Monitor noch Eingabegeräte benötigt (headless setup).
 
 ## Betriebssystemdatenträger erstellen
 
