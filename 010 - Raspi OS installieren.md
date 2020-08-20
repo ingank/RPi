@@ -1,8 +1,8 @@
 # Raspberry Pi OS installieren
 
-Diese Kurzanleitung beschreibt die Installation von Raspberry Pi OS auf einem RaspberryPi.
-An den RaspberryPi muss zur grundlegenden Netzwerk-Konfiguration weder Tastatur noch Bildschirm angeschlossen werden.
-Der administrative Zugriff erfolgt im späteren Verlauf per LAN/IPv4/SSH.
+Diese Kurzanleitung beschreibt die Installation von RaspiOS auf einer SD-Karte.
+Die Grundkonfiguration erfolgt dabei auf einem aktuellen Ubuntu (out of the box).
+Dies hat den Vorteil, dass der Raspi für seinen ersten Start - wenn denn so gewünscht - weder Monitor noch Eingabegeräte benötigt.
 
 ## Betriebssystemdatenträger erstellen
 
