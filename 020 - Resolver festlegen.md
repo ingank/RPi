@@ -1,9 +1,9 @@
 # Resolver (Standard Nameserver) festlegen
 
-Der RaspPi bezieht seine Resolver in der Grundeinstellung von DHCP-Servern
+Der RaspPi bezieht seine Resolver in der Grundeinstellung von *DHCP-Servern*
 (IPv4/IPv6) und aus *Router Advertisements* (IPv6). Wer jedoch eigene oder
 einfach nur andere Resolver nutzen möchte, muss etwas Hand anlegen.
-Im folgenden Beispiel werden die Standard-Resolver auf einem RaspPi
+Im folgenden Beispiel werden die Standard-Resolver auf einem Raspi
 dieser Änderung unterzogen.
 
 Istzustand:
@@ -25,8 +25,8 @@ nameserver 2001:4860:4860::8888
 nameserver 8.8.4.4
 nameserver 2001:4860:4860::8844
 ```
-Um die Datei /etc/resolv.conf dauerhaft zu ändern,
-können wir den Dienst dhcpcd bemühen:
+Um die Datei `/etc/resolv.conf` dauerhaft zu ändern,
+wird der Dienst `dhcpcd` bemüht:
 ```
 $ sudo su
 > mv /etc/dhcpcd.conf /etc/dhcpcd.conf~
