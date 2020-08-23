@@ -13,6 +13,7 @@ Istzustand:
 $ ip -f inet a s eth0 | grep inet
     inet 192.168.100.100/24 brd 192.168.100.255 scope global eth0
     inet 192.168.0.20/24 brd 192.168.0.255 scope global dynamic noprefixroute eth0
+
 $ ip route
 default via 192.168.0.1 dev eth0 proto dhcp src 192.168.0.20 metric 202
 192.168.0.0/24 dev eth0 proto dhcp scope link src 192.168.0.20 metric 202
@@ -23,6 +24,7 @@ Sollzustand:
 $ ip -f inet a s eth0 | grep inet
     inet 192.168.100.100/24 brd 192.168.100.255 scope global eth0
     inet 192.168.0.100/24 brd 192.168.0.255 scope global noprefixroute eth0
+
 $ ip route
 default via 192.168.0.1 dev eth0 src 192.168.0.100 metric 202 
 192.168.0.0/24 dev eth0 proto dhcp scope link src 192.168.0.100 metric 202 
@@ -44,7 +46,7 @@ $ sudo systemctl restart dhcpcd
 ### Mehr als eine IP-Adresse statisch zuweisen
 
 Soll mehr als eine IP-Adresse pro Interface gebunden werden,
-können die zusätzlichen Adressen über die Dateien in /etc/network/interfaces.d/* konfiguriert werden.
+können die zusätzlichen Adressen über die Dateien in `/etc/network/interfaces.d/` konfiguriert werden.
 Im folgenden Beispiel werden zwei zusätzliche IP-Adressen an das Interface eth0 gebunden:
 ```
 $ sudo nano /etc/network/interfaces.d/eth0-foo
