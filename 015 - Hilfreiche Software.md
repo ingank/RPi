@@ -21,6 +21,7 @@ sudo apt install thunderbird
 sudo apt install firefox-esr
 
 # vscode (Entwicklungsumgebung)
-sudo su; bash <( wget -O - https://code.headmelted.com/installers/apt.sh )
-Plugins: GitLens, ...
+sudo su
+bash <( wget -O - https://code.headmelted.com/installers/apt.sh )
+Plugins: GitLens, GitHistory, ...
 ```
