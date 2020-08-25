@@ -7,10 +7,6 @@ sudo apt upgrade
 ```
 ## Software installieren und konfigurieren
 ```
-# git
-git config --global user.email "foo@bar.bazz"
-git config --global user.name "foo"
-
 # mc (Midnight Commander)
 sudo apt install mc
 
