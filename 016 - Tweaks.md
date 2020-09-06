@@ -7,6 +7,9 @@ müssen folgende Aktionen **als Benutzer mit root-Rechten** ausgeführt werden:
 
 `nano /etc/dphys-swapfile`
 
+Raspbian hat standardmäßig einen Auslagerungsspeicher von 100 Megabyte.
+fr Ressourcen hungrige Applikationen sollte der Auslagerungsspeicher vergrert werden
+
 Raspbian has 100MB of swap by default.
 You should change it to 2048MB in the configuration file.
 So you will have to find this line:
