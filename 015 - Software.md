@@ -18,6 +18,14 @@ Plugins: GitLens, GitHistory, ...
 
 # node.js
 sudo su
-curl -sL https://deb.nodesource.com/setup_14.x | bash -
+curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
+
+# ungit
+# Achtung: node.js muss installiert sein
+sudo -H npm install -g ungit
+# ungit-Server starten:
+ungit
+# Standard-Adresse:
+http://localhost:8448/
 ```
