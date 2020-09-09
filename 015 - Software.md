@@ -10,8 +10,14 @@ sudo apt upgrade
 # mc (Midnight Commander)
 sudo apt install mc
 
-# vscode (Entwicklungsumgebung)
+# vscode/headmelted (Entwicklungsumgebung)
 sudo su
+wget -qO - https://packagecloud.io/headmelted/codebuilds/gpgkey | sudo apt-key add -
 bash <( wget -O - https://code.headmelted.com/installers/apt.sh )
 Plugins: GitLens, GitHistory, ...
+
+# node.js
+sudo su
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install -y nodejs
 ```
