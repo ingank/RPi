@@ -20,7 +20,7 @@ Führe auf einem Ubuntu-Desktop-System nacheinander folgende Schritte aus:
 
 Nach ca. 2 Minuten sollte das Image auf die SD-Card geschrieben sein.
 
-## Konfiguration (out of the box)
+## Grundkonfiguration ''Out of the Box''
 
 * Markiere die nun vorhandene boot-Partition.
 * Klicke Dreieck für 'Ausgewählte Partition einhängen'.
@@ -37,8 +37,9 @@ Im Dateimananger werden die Dateien der boot-Partition aufgelistet.
 
 Bemerkung:  
 Das Netzwerksegment 192.168.100.0 wird in diesem Beispiel unabhängig vom meist genutzen 192.168.0.0 für administrative Aufgaben verwendet.
-Da der die IPv4 192.168.100.100 direkt über einen Kernel-Boot-Paramter erzeugt wird,
-ist eine missliche Konfiguration über die üblichen Systemwerkzeuge zumindest für diese Adresse (fast) ausgeschlossen.
+Da die IPv4-Adresse 192.168.100.100 direkt über einen Kernel-Boot-Paramter an eth0 gebunden wird,
+ist der RasPi hoffentlich auch dann über diese Adresse erreichbar,
+wenn sich der Administrator durch eine missliche Netzwerkkonfiguration beispielsweise nach einem Reboot ausgeschlossen hat. 
 
 Weiterführende Informationen zum Kernel-Paramter 'ip=':
 * [Dokumentation auf kernel.org](https://www.kernel.org/doc/html/latest/admin-guide/nfs/nfsroot.html#kernel-command-line)
@@ -50,12 +51,12 @@ Weiterführende Informationen zum Kernel-Paramter 'ip=':
 * Lege SD-Card in den RaspberryPi ein und versorge ihn mit Betriebsspannung.
 * Richte auf dem Ubuntu-Rechner eine zweite IPv4 (beispielsweise 192.168.100.200) auf dem Ethernet-Interface ein.
 * Öffne einen Terminal auf dem Ubuntu-Rechner.
-* Im Terminal eingeben: `$ ssh pi@192.168.100.100`
+* Im Terminal eingeben: `ssh pi@192.168.100.100`
 * Das Standardpasswort lautet: **raspberry**
 
 ## Standardpasswort ändern
 
-Direkt nach dem ersten Login **muss** das voreingestellte Passwort geändert werden:
+Direkt nach dem ersten Login wird das voreingestellte Passwort geändert:
 
 ```
 pi@raspberrypi:~ $ passwd
