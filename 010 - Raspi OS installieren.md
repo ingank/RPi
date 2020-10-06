@@ -29,7 +29,7 @@ Nach ca. 2 Minuten sollte das Image auf die SD-Card geschrieben sein.
 Im Dateimananger werden die Dateien der boot-Partition aufgelistet.
 
 * Rechtsklick in freien Ordnerbereich -> 'In Terminal öffnen'.
-* Im Terminal eingeben: `$ sudo touch ssh`
+* Im Terminal eingeben: `sudo touch ssh`
 * Anfügen an Datei 'cmdline.txt': `ip=192.168.100.100:::255.255.255.0::eth0:off`
 * Alle Dateien und Programme schließen, die auf die boot-Partition zugreifen.
 * Klicke auf Quadrat im Programm 'Laufwerke' um die boot-Partition auszuhängen.
