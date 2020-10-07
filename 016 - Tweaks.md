@@ -2,26 +2,28 @@
 
 ## Swap-Speicher vergrößern
 
-Um die voreingestellte Größe des Auslagerungsspeichers zu verändern,
-müssen folgende Aktionen **als Benutzer mit root-Rechten** ausgeführt werden:
+Als Benutzer mit root-Rechten ausführen:
 
-`nano /etc/dphys-swapfile`
+```
+nano /etc/dphys-swapfile
+```
 
-Raspbian hat standardmäßig einen Auslagerungsspeicher von 100 Megabyte.
-fr Ressourcen hungrige Applikationen sollte der Auslagerungsspeicher vergrert werden
+Die voreingestellte Größe des Auslagerungsspeichers:
 
-Raspbian has 100MB of swap by default.
-You should change it to 2048MB in the configuration file.
-So you will have to find this line:
+```
+CONF_SWAPSIZE=100
+```
 
-`CONF_SWAPSIZE=100`
+Ändern in:
 
-And then change it into:
+```
+CONF_SWAPSIZE=2048
+```
 
-`CONF_SWAPSIZE=2048`
+[Strg]+[S] und [Strg]+[X] zum Speichern und Beenden drücken.
 
-Press [Strg]+[S] to save changes and [Strg]+[X] to close the nano-editor.
-Then restart dphys-swapfile to apply changes:
-
+Danach den Systemdienst dphys-swapfile neu starten:
+```
 /etc/init.d/dphys-swapfile stop
 /etc/init.d/dphys-swapfile start
+```
