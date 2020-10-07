@@ -77,9 +77,7 @@ network={
 }
 ```
 
----
-
-Nach der Konfiguration 'out of the box':
+### Abschließende Tätigkeiten
 
 * Partition 'boot' und 'rootfs' aushängen.
 * SD-Karte entnehmen.
