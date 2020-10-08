@@ -43,4 +43,12 @@ AddressFamily inet
 #ListenAddress 0.0.0.0
 ListenAddress 192.168.100.100
 ```
+Der SSH-Dämon wird neu gestartet:
+```
+systemctl restart sshd
+```
+Bevor die aktuelle Verbindung beendet wird, kann das Ergebnis inspiziert werden:
+```
+systemctl status sshd
+```
 **Achtung:** Ein Zugriff per `ssh pi@localhost` ist nun auch nicht mehr möglich!
