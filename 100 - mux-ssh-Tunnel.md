@@ -15,6 +15,7 @@ Geht der Tunnel verloren, wird erneut versucht, die Verbindung aufzubauen.
 ## Nachteile dieser Variante
 
 * kein echtes VPN
+* nur TCP, kein UDP möglich
 
 ## Clientseitige Konfiguration (Rasperry Pi)
 
