@@ -37,5 +37,5 @@ ungit
 
 Standard-Adresse der ungit-Website:
 ```
-http://localhost:8448/`
+http://localhost:8448/
 ```
