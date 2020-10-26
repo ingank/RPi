@@ -21,6 +21,7 @@ Plugins: GitLens, GitHistory, ...
 ```
 
 ### ungit
+
 Ungit benötigt NodeJS.
 ```
 sudo su
@@ -28,8 +29,13 @@ curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
 sudo -H npm install -g ungit
 ```
-#### ungit-Server starten:
+
+Ungit-Server starten:
 ```
 ungit
 ```
-Standard-Adresse der ungit-Website: `http://localhost:8448/`
+
+Standard-Adresse der ungit-Website:
+```
+http://localhost:8448/`
+```
