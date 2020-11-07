@@ -1,11 +1,11 @@
-# Statische IP-Adressen vergeben
+# RasPi: Statische IP-Adressen vergeben
 
 Der DHCP-Server des lokalen Netzwerkes vergibt bereitwillig IP-Adressen aus seinem Adresspool.
-Auch der RaspPi bezieht in der Grundkonfiguration seine IP-Adresse auf diese Weise.
+Auch der RasPi bezieht in der Grundkonfiguration seine IP-Adresse auf diese Weise.
 
-### Eine einzelne IP-Adresse statisch zuweisen
+## Eine einzelne IP-Adresse statisch zuweisen
 
-Soll der RaspPi eine statische IP zugewiesen bekommen,
+Soll der RasPi eine statische IP zugewiesen bekommen,
 kann dies über den schon bekannten Dienst dhcpcd geschehen.
 
 Istzustand:
@@ -19,6 +19,7 @@ default via 192.168.0.1 dev eth0 proto dhcp src 192.168.0.20 metric 202
 192.168.0.0/24 dev eth0 proto dhcp scope link src 192.168.0.20 metric 202
 192.168.100.0/24 dev eth0 proto kernel scope link src 192.168.100.100
 ```
+
 Sollzustand:
 ```
 $ ip -f inet a s eth0 | grep inet
@@ -30,6 +31,7 @@ default via 192.168.0.1 dev eth0 src 192.168.0.100 metric 202
 192.168.0.0/24 dev eth0 proto dhcp scope link src 192.168.0.100 metric 202 
 192.168.100.0/24 dev eth0 proto kernel scope link src 192.168.100.100 
 ```
+
 Vorgehen:
 ```
 $ sudo nano /etc/dhcpcd.conf
@@ -43,7 +45,7 @@ static routers=192.168.0.1
 $ sudo systemctl restart dhcpcd
 ```
 
-### Mehr als eine IP-Adresse statisch zuweisen
+## Mehr als eine IP-Adresse statisch zuweisen
 
 Soll mehr als eine IP-Adresse pro Interface gebunden werden,
 können die zusätzlichen Adressen über die Dateien in `/etc/network/interfaces.d/` konfiguriert werden.
@@ -63,4 +65,4 @@ iface eth0 inet static
     netmask 255.255.255.0
     gateway 192.168.0.1
 ```
-Die Adressen stehen nach einem Neustart des RaspPi bereit.
+Die Adressen stehen nach einem Neustart des RasPi bereit.
