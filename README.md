@@ -1,6 +1,6 @@
 # RPi
 
-Meine Raspberry Pi Dokumentation und Toolsammlung.
+Dokumentation zu Raspberry Pi und Raspi OS.
 
-# Ressourcen
+# Externe Ressourcen
 * [raspberrypi/documentation on GitHub](https://github.com/raspberrypi/documentation)
