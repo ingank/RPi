@@ -1,12 +1,13 @@
 # Raspberry Pi OS installieren
 
-Diese Kurzanleitung beschreibt die Installation von RaspiOS auf einer SD-Karte.
+Diese Kurzanleitung beschreibt die Installation von RaspiOS
+auf einer SD-Karte mit Hilfe des Betriebssystems Ubuntu Desktop.
 
 ## Betriebssystemdatenträger erstellen
 
-Führe auf einem Ubuntu-Desktop-System nacheinander folgende Schritte aus:
+Führe nacheinander folgende Schritte aus:
 
-* Lade das neueste Raspberry Pi OS herunter.
+* Lade das Image des aktuellen Raspberry Pi OS herunter.
 * Entpacke die .zip-Datei.
 * Lege eine SD-Card ein.
 * Starte 'Anwendungen anzeigen' -> 'Hilfsprogramme' -> 'Laufwerke'.
